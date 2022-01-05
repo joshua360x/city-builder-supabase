@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="gutter-right logo">
+            <img src="../assets/big-logo.png" />
+        </div>
+    </header>    
+    <button id="logout">Logout</button>
+    <main>
+        <h1>You are logged in!</h1>
+        <section id="city-name">
+
+        </section>
+
+        <section>
+            <div id="skyline-div">
+                <img id="skyline">
+            </div>
+            <div id="castle-div">
+                <img id="castle">
+            </div>
+            <div id="land-div">
+                <img id="land">
+            </div>
+        </section>
+
+        <section>
+            <label>
+                Skyline
+                <select id="skyline-dropdown">
+                    <option value="cloudy">Cloudy</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="warm">Warm</option>
+                </select>
+            </label>
+            <label>
+                Castle
+                <select id="castle-dropdown">
+                    <option value="small">Small</option>
+                    <option value="big">Big</option>
+                    <option value="mega">Mega</option>
+                </select>
+            </label>
+            <label>
+                Land
+                <select id="land-dropdown">
+                    <option value="grass">Grass</option>
+                    <option value="sand">Sand</option>
+                    <option value="dry">Dry</option>
+                </select>
+            </label>
+            <form id="name-submit">
+                <label>
+                    City Name:
+                    <input id="name-input" type="text">
+                    <button>Change Name</button>
+                </label>
+
+            </form>
+
+            <form id="tagline-submit">
+                <label>
+                    Tagline:
+                    <input type="text">
+                    <button>Add Tagline</button>
+
+                </label>
+            </form>
+        </section>
+        <div id="tagline">
+
+        </div>
+    </main>
+    <footer>
+        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+    </footer>
+    <script type="module" src="./city.js"></script>
+</body>
+
+</html>
