@@ -11,7 +11,7 @@ export async function getUser() {
 
 
 
-export async function getCity() {
+export async function fetchCity() {
     const response = await client
     //technically should be cities since its multiple and its grabbing only one from the database
         .from('city')
@@ -39,6 +39,38 @@ export async function createDefaultCity() {
 
 
 
+
+export async function updateName(value) {
+
+    const user = await getUser();
+
+    const response = await client
+        .from('city')
+
+        .update({ name: value })
+
+        .match({ user_id: user.user.id })
+
+        .single();
+  
+    return checkError(response);
+}
+
+export async function updateTag(arr) {
+
+    const user = await getUser();
+
+    const response = await client
+        .from('city')
+
+        .update({ tagline: arr })
+
+        .match({ user_id: user.user.id })
+
+        .single();
+  
+    return checkError(response);
+}
 
 export async function updateSkyline(value) {
 
